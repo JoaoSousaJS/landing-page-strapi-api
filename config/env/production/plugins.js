@@ -4,9 +4,9 @@ module.exports = ({ env }) => ({
     providerOptions: {
       accessKeyId: env('AWS_ACCESS_KEY_ID'),
       secretAccessKey: env('AWS_ACCESS_SECRET'),
-      region: 'advancedreact-assets',
+      region: env('AWS_REGION'),
       params: {
-        Bucket: 'Asia Pacific (Sydney) ap-southeast-2',
+        Bucket: env('AWS_BUCKET'),
       },
     },
   },
